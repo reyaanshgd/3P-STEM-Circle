@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3P STEM Circle | Empowering Communities Through STEM</title>
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #00a896;
+            --accent: #ff9f1c;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        /* Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-nav {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-nav:hover {
+            background: #004085;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 700;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            font-weight: 700;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Pillars Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--secondary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact & Sign-up Form */
+        .form-container {
+            background: var(--white);
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            background: #004085;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">3P STEM <span>Circle</span></a>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#pillars">The 3Ps</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#get-involved" class="btn-nav">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="max-width: 100%;">
+        <h1>Empowering Communities <br>Through Experiential STEM</h1>
+        <p>Connecting students, educators, and local leaders to build real-world solutions through Problem-Based, Project-Based, and Place-Based learning.</p>
+        <div class="hero-btns">
+            <a href="#get-involved" class="btn-main">Join the Circle</a>
+            <a href="#pillars" class="btn-secondary">Learn Our Model</a>
+        </div>
+    </section>
+
+    <section id="pillars">
+        <h2 class="section-title">The 3P Learning Model</h2>
+        <p class="section-subtitle">Our educational framework anchors science and technology in meaningful local contexts.</p>
+        <div class="grid-3">
+            <div class="card">
+                <h3>1. Problem-Based</h3>
+                <p>Students engage with critical, real-world challenges—developing analytical skills and critical thinking by designing authentic solutions.</p>
+            </div>
+            <div class="card">
+                <h3>2. Project-Based</h3>
+                <p>Learners gain hands-on technical skills through long-term creation, collaboration, and building tangible prototypes.</p>
+            </div>
+            <div class="card">
+                <h3>3. Place-Based</h3>
+                <p>Education is tied to local environments, culture, and community assets, fostering civic engagement and relevant impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-involved">
+        <h2 class="section-title">Get Involved with 3P STEM Circle</h2>
+        <p class="section-subtitle">Whether you are a student, mentor, educator, or partner—there is a place for you in our circle.</p>
+        
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="jane@example.org">
+                </div>
+                <div class="form-group">
+                    <label for="role">I am a...</label>
+                    <select id="role">
+                        <option value="student">Student / Youth Participant</option>
+                        <option value="educator">Educator / School Leader</option>
+                        <option value="volunteer">Volunteer / Mentor</option>
+                        <option value="partner">Community Partner / Sponsor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">How would you like to contribute or participate?</label>
+                    <textarea id="message" rows="4" placeholder="Tell us a bit about your interest..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 3P STEM Circle. All rights reserved. | Empowering the next generation of innovators.</p>
+    </footer>
+
+    <script>
+        // Interactive Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out to 3P STEM Circle! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
